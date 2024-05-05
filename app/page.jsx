@@ -113,13 +113,9 @@ export default function Home(){
             
             <div className={styles.title}>
                 <Image
-                    src="/quirkylock_purple.png"
-                    width={55}
-                    height={55}
-                    alt=""
                 />
                 <div className={styles.title_text}>                
-                    QuirkyLock
+                💝 Find your birthday gift 💝
                 </div>
             </div>
             
@@ -147,12 +143,7 @@ export default function Home(){
             </div>
 
         </div>
-        <footer className={styles.footer}>
-            Check out the <a href="https://github.com/sayantanDs/quirkylock" target="_blank">GitHub</a> for this project. <br/>
-            This site is heavily inspired by&nbsp;
-            <a href="https://neal.fun/password-game/" target="_blank">The Password Game</a> by&nbsp;
-            <a href="https://twitter.com/nealagarwal" target="_blank">Neal</a>
-        </footer>
+        
         </>
       )
 }
