@@ -129,7 +129,7 @@ export default function Home(){
             <div ref={aaParent}>
                 {allSolved && <RuleBox 
                     heading={"Congratulations!"} 
-                    msg={"You have successfully created a password. \u{1F389}\u{1F389}"}
+                    msg={"You have successfully found your gift! \u{1F389}\u{1F389}. Your gift is the full text after the time emoji"}
                     correct={true}
                 />}        
                 {ruleState.filter(r => r.unlocked).sort(sort_rules).map(r => {

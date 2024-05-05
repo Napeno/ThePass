@@ -1,22 +1,22 @@
 import Rule from "../Rule";
 
 async function get_todays_wordle(){
-    let date = new Date();
-    let year = date.getFullYear();
-    let month = date.getMonth() + 1;
-    let day = date.getDate();
+    // let date = new Date();
+    // let year = date.getFullYear();
+    // let month = date.getMonth() + 1;
+    // let day = date.getDate();
 
-    let url = `https://www.nytimes.com/svc/wordle/v2/${year}-${"0" + month}-${"0" + day}.json`;
+    // let url = `https://www.nytimes.com/svc/wordle/v2/${year}-${"0" + month}-${"0" + day}.json`;
     
-    const options = {
-        method: 'GET',
-        mode: 'no-cors' // Set mode to 'no-cors'
-    };
+    // const options = {
+    //     method: 'GET',
+    //     mode: 'no-cors' // Set mode to 'no-cors'
+    // };
 
-    let response = await fetch(url, options);
-    let json = await response.json();
+    // let response = await fetch(url, options);
+    // let json = await response.json();
 
-    return json.solution;
+    return "value";
 
 }
 

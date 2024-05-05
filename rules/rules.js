@@ -8,6 +8,7 @@ import RuleTimeEmoji from "./RuleTimeEmoji/RuleTimeEmoji";
 import RuleQR from "./RuleQR/RuleQR";
 import RuleSum from "./RuleSum/RuleSum";
 import RuleEarthquake from "./RuleEarthquake/RuleEarthquake";
+import Rulechess from "./RuleChess/RuleChess";
 
 
 var rules = [
@@ -37,37 +38,39 @@ var rules = [
     ),
     new RuleSum(),
     new Rule( 
-        "Your password must include the name of \"The power house of the cell\". \u{1F9A0}", //&#x1F9A0;
-        (t) => /(?:mitochondria)|(?:mitochondrion)/i.test(t)
-    ),
-    new Rule( 
-        "Your password must include the name of a continent.",
-        (t) => /asia|europe|africa|australia|oceania|north america|south america|antarctica/i.test(t)
+        "Your password must include the emoji of your born's day moon phrase", //&#x1F9A0;
+        (t) => /(?:🌒)/i.test(t)
     ),
     new Rule( 
         "Your password must contain the value of pi up to first 5 decimal places.",
         (t) => /(?:3\.14159)/.test(t)
     ),    
     
-    new RuleTimeEmoji(),
-    // new RuleWordle(),
+    new Rulechess(),
+    new RuleTimeEmoji(),  
+    new RuleWordle(),
     new RuleEarthquake(),
     // new RuleQR(),
-    new RuleMorse(),
+    // new RuleMorse(),
     new RuleLocation(),
     new RuleRiddle(),
-    new Rule(
-        "Your password must have as many vowels as consonants.",
-        (t) => (t.match(/[aeiou]/ig) || []).length === (t.match(/[bcdfghjklmnpqrstvwxys]/ig) || []).length
-    ),
+    // new Rule(
+    //     "Your password must have as many vowels as consonants.",
+    //     (t) => (t.match(/[aeiou]/ig) || []).length === (t.match(/[bcdfghjklmnpqrstvwxys]/ig) || []).length
+    // ),
     new RuleSlidingPuzzle(),
     new Rule(
         "Your password must include the length of your password.",
         (t) => {
             let l = t.length;
+            console.log(l);
             let r = new RegExp(`${l}`);
             return r.test(t);
         }
+    ),
+    new Rule( 
+        "Your password must bellow 51 words",
+        (t) => t?.length <= 51
     )
 ];
 
