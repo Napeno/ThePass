@@ -16,7 +16,7 @@ async function get_todays_wordle(){
     // let response = await fetch(url, options);
     // let json = await response.json();
 
-    return "decal";
+    return "shave";
 
 }
 
