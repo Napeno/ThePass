@@ -3,7 +3,7 @@ import Rule from "../Rule";
 
 export default class RuleEarthquake extends Rule{
     constructor(){
-        super("Oh no! there is an earthquake! Get your password to safety! Add this chair to your password and put the rest of your password below it.");
+        super("Oh no! there is an earthquake! Get your gift to safety! Add this chair to your gift and put the rest of your gift below it.");
         this.renderItem = ({pswd, setPswd, shakePasswordBox, correct}) => {
             return (
                 <Earthquake 

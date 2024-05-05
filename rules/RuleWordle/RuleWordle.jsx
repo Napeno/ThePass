@@ -16,13 +16,13 @@ async function get_todays_wordle(){
     // let response = await fetch(url, options);
     // let json = await response.json();
 
-    return "value";
+    return "decal";
 
 }
 
 export default class RuleWordle extends Rule{
     constructor(){
-        super("Your password must contain today's ");
+        super("Your gift must contain today's ");
 
         get_todays_wordle()
             .then(solution => this.solution = solution)
